@@ -1,17 +1,10 @@
-fun createPrinter() {
-    // Khai báo một đối tượng ẩn danh
-    val printer = object {
-        val message = "Hello from the Printer object"
-
-        fun printMessage() {
-            println(message)
-        }
-    }
-
-    // Sử dụng đối tượng ẩn danh trong hàm
-    printer.printMessage()
+val pi: Double by lazy {
+    println("Calculating PI")
+    3.14159
 }
 
 fun main() {
-    createPrinter() // Gọi hàm và sử dụng đối tượng ẩn danh bên trong nó
+    println("Before accessing pi")
+    println(pi)  // Output: Calculating PI 3.14159
+    println(pi)  // Output: 3.14159 (không tính toán lại)
 }
